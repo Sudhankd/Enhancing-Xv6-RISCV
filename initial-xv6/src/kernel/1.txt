@@ -1,0 +1,41 @@
+// #endif
+    // #ifdef FCFS
+    //     intr_off();
+    //     struct proc *p;
+    //     struct cpu *c = mycpu();
+
+    //     c->proc = 0;
+    //     struct proc *tobesch = proc;
+    //     uint m_time = __INT_MAX__;
+    //     for (p = proc; p < &proc[NPROC]; p++)
+    //     {
+    //       acquire(&p->lock);
+    //       if (p->state == RUNNABLE)
+    //       {
+    //         // Switch to chosen process.  It is the process's job
+    //         // to release its lock and then reacquire it
+    //         // before jumping back to us.
+    //         if (p->ctime < m_time)
+    //         {
+    //           m_time = p->ctime;
+    //           // release(&tobesch->lock);
+    //           tobesch = p;
+    //         }
+    //         // Process is done running for now.
+    //         // It should have changed its p->state before coming back.
+
+    //         // c->proc = 0;
+    //       }
+    //       release(&p->lock);
+    //     }
+    //     if (tobesch)
+    //     {
+    //       acquire(&tobesch->lock);
+    //       tobesch->state = RUNNING;
+    //       c->proc = tobesch;
+    //       swtch(&c->context, &tobesch->context);
+    //       c->proc = 0;
+    //       release(&tobesch->lock);
+    //     }
+
+    // // #endif
